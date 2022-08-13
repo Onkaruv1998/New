@@ -1,0 +1,66 @@
+package PomClasses;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import UtilityClasses.UtilityClass;
+
+public class Login_Page extends UtilityClass {
+	
+	WebDriver driver;
+
+	@FindBy(xpath="(//input[@type='text'])[2]")
+	WebElement email;
+	
+	@FindBy(xpath="//input[@type='password']")
+	WebElement password;
+	
+	@FindBy(xpath="(//button[@type='submit'])[2]")
+	WebElement loginButton;
+	
+	public Login_Page(WebDriver driver)
+	{
+		PageFactory.initElements(driver,this);
+		this.driver=driver;
+	}
+	
+	public void enterEmail() throws IOException
+	{
+		email.sendKeys(UseProperties("email"));
+	}
+	
+	public void enterPassword() throws IOException
+	{
+		password.sendKeys(UseProperties("password"));
+	}
+	
+	public void clickLoginButton()
+	{
+		loginButton.click();
+	}
+	
+	public boolean isHomePagevisible()
+	{
+		try {
+			WebElement usename=driver.findElement(By.xpath("//div[text()='Akshay']"));
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

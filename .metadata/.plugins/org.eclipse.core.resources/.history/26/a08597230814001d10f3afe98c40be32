@@ -1,0 +1,29 @@
+package pkg2;
+
+import pkg1.Practice;
+
+public class Practice2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		char a=99;
+//		System.out.println(a);
+
+//	for(char a=97;a<=122;a++)
+//		{
+//			for(char b=97;b<=a;b++)
+//			{
+//				System.out.print(a);
+//			}
+//			System.out.println();
+//		}
+//	}
+		for(char a='A';a<='E';a++) {
+			for(char b='A';b<=a;b++) {
+				System.out.print(b);
+			}
+			System.out.println();
+		}
+
+}}

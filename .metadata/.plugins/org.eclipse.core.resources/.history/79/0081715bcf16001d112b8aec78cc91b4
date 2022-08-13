@@ -1,0 +1,23 @@
+package pkg9;
+
+import java.util.LinkedList;
+
+public class LinkedLists {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		LinkedList list=new LinkedList();
+		list.add(78);
+		list.add(96);
+		list.add(52);
+		list.add(32);
+		list.add(87);
+		list.add(52);
+		
+		System.out.println(list.get(3));
+		
+		
+	}
+
+}

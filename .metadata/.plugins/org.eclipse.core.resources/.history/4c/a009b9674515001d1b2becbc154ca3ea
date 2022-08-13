@@ -1,0 +1,10 @@
+package pkg4;
+
+public interface Interface2 {
+
+	String a="velocity";
+	int b=12;
+	
+	void c();
+	void d();
+}

@@ -1,0 +1,41 @@
+package PomClasses;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Home_Page {
+
+	WebDriver driver;
+	
+	@FindBy(xpath="//div[text()='Mobiles']")
+	WebElement mobiles;
+	
+	public Home_Page()
+	{
+		PageFactory.initElements(driver, this);;
+		this.driver= driver;
+		
+	}
+	
+	public void clickOnMobileCatagory()
+	{
+		mobiles.click();
+	}
+	
+	public boolean isBannersPageisVisible()
+	{
+		try {
+			WebElement BannerPage=driver.findElement(By.xpath("//h1[@class='_3vKRL2']"));
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
+	}
+		
+	
+}

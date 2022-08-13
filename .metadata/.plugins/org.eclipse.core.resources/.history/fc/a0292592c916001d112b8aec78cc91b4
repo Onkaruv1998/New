@@ -1,0 +1,11 @@
+package pkg9;
+
+public class ArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayLists <Integer> list=new ArrayLists<>();
+	}
+
+}

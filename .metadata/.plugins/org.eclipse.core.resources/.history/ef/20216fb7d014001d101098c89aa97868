@@ -1,0 +1,9 @@
+package pkg1;
+
+public class Practice1 {
+
+	void b()
+	{
+		System.out.println("this is method b");
+	}
+}

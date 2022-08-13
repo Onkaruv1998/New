@@ -1,0 +1,10 @@
+package pkg4;
+
+public interface Interface1 {
+
+	public static final String a="onkar";
+	int b=16;
+	
+	public abstract void a();
+	void b();
+}

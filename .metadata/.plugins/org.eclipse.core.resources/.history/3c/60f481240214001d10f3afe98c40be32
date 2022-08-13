@@ -1,0 +1,19 @@
+package pkg2;
+
+import pkg1.Practice;
+
+public class Practice3 extends Practice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		b();
+		Practice p1=new Practice();
+		
+	}
+
+	public static void a()
+	{
+		System.out.println("this is class a");
+	}
+}

@@ -1,0 +1,28 @@
+package pkg5;
+
+public class StringMethods {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String a="velocity";
+		if(a.equals("velocity"))
+		{
+			System.out.println("true");
+		}
+		else
+		{
+			System.out.println("false");
+		}
+		
+		if(a.equalsIgnoreCase("VELOCITY"))
+		{
+			System.out.println("true");
+		}
+		else
+		{
+			System.out.println("false");
+		}
+	}
+
+}

@@ -1,0 +1,57 @@
+package pkg9;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.TreeSet;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class Sets {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HashSet hs=new HashSet();
+		
+		hs.add("satara");
+		hs.add("mumbai");
+		hs.add("pune");
+		hs.add(100);
+		hs.add('#');
+		hs.add(null);
+		hs.add(null);
+		hs.add("pune");
+		
+		System.out.println(hs);
+		
+		
+		LinkedHashSet lhs=new LinkedHashSet();
+		lhs.add("satara");
+		lhs.add("mumbai");
+		lhs.add("pune");
+		lhs.add(100);
+		lhs.add('#');
+		lhs.add(null);
+		lhs.add(null);
+		lhs.add("pune");
+		
+		System.out.println(lhs);
+		
+        TreeSet ts=new TreeSet();
+		
+		ts.add("satara");
+		ts.add("mumbai");
+		ts.add("pune");
+		ts.add("100");
+		ts.add("#");
+		
+		ts.add("pune");
+		
+		System.out.println(ts);
+		
+		
+	}
+
+}

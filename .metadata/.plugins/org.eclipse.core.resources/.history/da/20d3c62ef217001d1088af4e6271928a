@@ -1,0 +1,53 @@
+package PomClasses;
+
+import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+
+public class Home_Page {
+
+	WebDriver driver;
+	
+	public Home_Page()
+	{
+		PageFactory.initElements(driver, this);;
+		this.driver= driver;
+		
+	}
+	
+	public boolean isCatagoryListVissible()
+	{
+		try{
+			List<WebElement> list=driver.findElements(By.xpath("//div[@class='xtXmba']"));
+		String b = null;
+		for(int a=0;a<list.size();a++)
+		{
+			 b=list.get(a).getText();
+		}
+		String c="Mobiles\r\n"
+				+ "Fashion\r\n"
+				+ "Electronics\r\n"
+				+ "Beauty\r\n"
+				+ "Home\r\n"
+				+ "Appliances\r\n"
+				+ "Furniture\r\n"
+				+ "Travel\r\n"
+				+ "Grocery";
+		if(b.equals(c))
+		{
+			return true;
+		}
+		return true;
+		}catch(Exception e)
+		{
+			return false;
+		}
+		
+		
+	}
+}
