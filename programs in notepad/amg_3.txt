@@ -1,0 +1,21 @@
+Scanner sc=new Scanner(System.in);
+System.out.println("Give user input");
+int num=sc.nextInt();
+int a;
+int b;
+b=num;
+int sum=0;
+for(int c=0;c<=3;c++){
+  if(num>0){
+		a=num%10;
+            num=num/10;
+		sum=sum+(a*a*a*a);
+          
+          }
+}
+if(b==sum){
+  System.out.println(" it is amstrong number");
+}
+else{
+    System.out.println("it is not amstrong number");
+}

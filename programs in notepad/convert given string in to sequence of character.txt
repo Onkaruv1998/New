@@ -1,0 +1,10 @@
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter your string");
+	String s=sc.nextLine();
+	char [] f= s.toCharArray();
+	Arrays.sort(f);
+	System.out.println(f);
+	
+	sc.close();
+}

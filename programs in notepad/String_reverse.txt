@@ -1,0 +1,13 @@
+public static void main(String[] args){
+String a=" my name is shreyash";
+
+System.out.println(a);
+System.out.println("reverse the string");
+
+int d=a.length;
+for(int i=(d-1);i>=0;i--){
+          System.out.println(a.charAt(i));
+
+}
+
+} 

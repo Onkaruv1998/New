@@ -1,0 +1,29 @@
+to find maximum and minimum number from array
+
+int[]a={10,20,45,5,89}
+
+1) maximum number
+
+int maximun=a[0];
+for(int b=1;b<a.length;b++)
+{
+ if(maximum<a[b])
+ {
+  maximum=a[b];
+ }
+}
+ System.out.println(maximum);
+-----------------------------------------------------------------------------------
+
+2)minimum number
+
+int minimum=a[0];
+for(int b=1;b<c.length;b++)
+{
+ if(minimum>a[b])
+ {
+  minimum=a[b];
+ }
+}
+ System.out.println(minimum);
+

@@ -1,0 +1,30 @@
+public static void main(String[] args) {
+		System.out.println("give user input");
+		Scanner s=new Scanner(System.in);
+		System.out.println("a");
+		int a=s.nextInt();
+		System.out.println("b");
+		int b=s.nextInt();
+		System.out.println("c");
+		int c=s.nextInt();
+		System.out.println("d");
+		int d=s.nextInt();
+		System.out.println("e");
+		int e=s.nextInt();
+		
+		int f[]= {a,b,c,d,e};
+		System.out.println("f = " +Arrays.toString(f));
+		boolean g=false;
+		for(int i=0;i<=(f.length-1);i++) {
+			for(int j=i+1;j<f.length;j++) {
+				if(f[i]==f[j]) {
+				System.out.println("duplicate value from array is " +f[i]);
+				g=true;
+				}
+			}
+			
+			}
+		if(g==false) {
+			System.out.println("duplicate value from array is not found");
+		}
+	}

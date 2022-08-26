@@ -1,0 +1,38 @@
+public static void main (String []args){
+
+int a=23;
+int b=55;
+int c=86;
+System.out.println("maximum number");
+{
+if(a>b && a>c){
+     System.out.println( "maximum number is " +a);
+      }
+if(b>a && b>c){
+       System.out.println( "maximum number is " +b);
+      }
+if(c>a && c>b){
+         System.out.println( "maximum number is " +c);
+}
+
+
+ }
+System.out.println("minimum  number");
+
+{
+if(a<b && a<c){
+ System.out.println( " minimum  number is " +a);
+}
+if(b<a && b<c){
+System.out.println( " minimum  number is " +b);
+
+}
+if(c<a &
+
+
+
+
+}
+
+
+}

@@ -1,0 +1,17 @@
+fibonacci series
+
+Scanner scn =new Scanner(System.in);
+System.out.println("enter limit");
+int limit=scn.nextInt();
+int a=0;
+int b=1;
+int c;
+System.out.print(a+", ");
+System.out.print(b+", ");
+for(int d=3;d<=limit;d++)
+{
+ c=a+b;
+ System.out.print(c+", ");
+ a=b;
+ b=c;
+}

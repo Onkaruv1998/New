@@ -1,0 +1,25 @@
+
+Scanner scn = new Scanner(System.in);
+System.out.Println("enter 4 digit number");
+int num=scn.nextInt();
+int a;
+int b;
+b=num;
+int sum=0;
+for(int c=0;c<=3;c++)
+{
+ if(num>0)
+ {
+  a=num%10;
+  num=num/10;
+  sum=sum+(a*a*a*a);
+  }
+}
+ if(b==sum)
+ {
+ System.out.println("it is a amg number");
+ }
+ else
+ {
+ System.out.println("it is not a amg number);
+ }

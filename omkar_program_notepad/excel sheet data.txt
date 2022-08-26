@@ -1,0 +1,75 @@
+package flippkg1;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.function.Function;
+
+import javax.swing.text.Position;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.examples.hssf.usermodel.NewWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class ClassB {
+
+	
+
+	public static void main(String[] args) throws InterruptedException, EncryptedDocumentException, IOException {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver", "D:\\Driver\\chromedriver_win32\\chromedriver.exe");
+		  WebDriver driver=new ChromeDriver();
+		  driver.get("https://www.flipkart.com/");
+		 
+		  driver.manage().window().maximize();
+		  
+    //    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+       FileInputStream file=new FileInputStream("C:\\Users\\Dell\\Documents\\Book1.xlsx");
+       XSSFWorkbook workbook = new XSSFWorkbook(file);
+       XSSFSheet sheet1 = workbook.getSheet("Sheet1");
+      // Sheet sheet=WorkbookFactory.create(file).getSheet("Sheet1");
+      String data=sheet1.getRow(0).getCell(1).getStringCellValue();
+        WebElement email=driver.findElement(By.xpath("(//input[@type='text'])[2]"));
+        email.sendKeys(data);
+        String data1=sheet1.getRow(1).getCell(1).getStringCellValue();
+        WebElement password=driver.findElement(By.xpath("//input[@type='password']"));
+        password.sendKeys(data1);
+        
+    //    WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+        
+        WebElement login=driver.findElement(By.xpath("(//button[@type='submit'])[2]"));
+        login.click();
+        
+       
+        Row row=sheet1.getRow(0);
+        Cell cell=row.createCell(2);
+        cell.setCellValue(data);
+        
+        FileOutputStream file1=new FileOutputStream("C:\\Users\\Dell\\Documents\\Book1.xlsx");
+       workbook.write(file1);
+        
+		
+		
+	}
+
+}

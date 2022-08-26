@@ -1,0 +1,10 @@
+public static void main(String[] args){
+           int a[]={112,155,356,963,456,889,637,9987,3624,489756};
+           int minimumNumber =a[0];
+           for(int b=1;b<a.length;b++){
+              if( minimumNumber>a[b]){
+                         minimumNumber=a[b];
+				}
+          }
+            System.out.println("minimum number from loop is "  + minimumNumber);
+}

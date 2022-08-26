@@ -1,0 +1,46 @@
+public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		
+		//maximize window
+		driver.manage().window().maximize();
+		
+		//implicitlyWait
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(50000));
+		
+		
+		//website
+		
+		driver.get("https://www.hugedomains.com/domain_profile.cfm?d=demout.com");
+		
+		Thread.sleep(3500);
+		
+		List<WebElement> links1=driver.findElements(By.tagName("a"));
+		
+		//numberlinks
+		System.out.println(links1.size());
+		
+		for(int i=0;i<links1.size();i++) {
+		WebElement element=links1.get(i);
+		   
+			String url=element.getAttribute("href");
+			
+			URL link=new URL(url);
+			HttpURLConnection urlconeect=(HttpURLConnection) link.openConnection();
+			
+			Thread.sleep(2500);
+			urlconeect.connect();
+			
+			int responseCode=urlconeect.getResponseCode();
+			
+			if(responseCode>=400) {
+				System.out.println(url +"-"+ " is broken link");
+			}
+			else {
+				System.out.println(url +"-"+ " is valid link");
+			}
+		
+			
+		
+	}
+	}

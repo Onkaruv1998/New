@@ -1,0 +1,18 @@
+to find Angstrom number from given range
+
+for(int a=0;a<=9;a++)
+{
+  for(int b=0;b<=9;b++)
+  {
+    for(int c=0;c<=9;c++)
+     {
+       int d=a*100+b*10+c;
+       int h=(a*a*a)+(b*b*b)+(c*c*c);
+       if(d==h)
+       {
+         System.out.Println(d);
+        }
+      }
+    }
+}
+

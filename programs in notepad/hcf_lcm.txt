@@ -1,0 +1,17 @@
+public static void (String [] args){
+  Scanner sc=new Scanner(System.in);
+    System.out.println(" Give user input num1");
+     int num1=sc.nextInt();
+          System.out.println(" Give user input for num2");
+       int num2=sc.nextInt();
+         int hfc=1;
+         for(int a=1;a<=num1;a++){
+               if(num1%a==0 && num2%a==0){
+                     hfc=a;
+                          }
+            }
+             System.out.println("hcf is : " +hcf);
+             int lcm=1;
+              lcm=(num1*num2)/hcf;
+              System.out.println("lcm is : " +lcm);
+}

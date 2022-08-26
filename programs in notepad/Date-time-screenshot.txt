@@ -1,0 +1,13 @@
+
+public stativ void date(WebDriver driver) throws IOException{
+
+Date date=new Date();
+SimpleDateFormat f=new SimpleDateFormat("dd-MM-YYYY-hh-mm-ss");
+String time=f.format(date);
+
+File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+		File dest=new File("D:\\SeleniumSS"+time+".jpg");
+		
+	    org.openqa.selenium.io.FileHandler.copy(source, dest);
+}

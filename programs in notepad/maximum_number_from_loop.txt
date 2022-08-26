@@ -1,0 +1,11 @@
+public static void main(String [] args){
+   int [] a={23,56,45,96,78,63,41,65,33,45};
+        int maximumNumber=a[0];
+          for(int b=1;b<a.length;b++){
+                  if(maximumNumber<a[b]){
+					maximumNumber=a[b];
+				}
+                   
+             }
+                     System.out.println(" maximum Number from loop a is" +maximumNumber);
+}

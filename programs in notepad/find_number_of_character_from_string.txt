@@ -1,0 +1,27 @@
+public static void main(String[] args) {
+		String a="satara is in maharashtra";
+		String d="";
+		String[] b=a.split(" ");
+		System.out.println(Arrays.toString(b));
+		            for(int i=0;i<b.length;i++) {
+		            	d=d+b[i];
+            	
+            }
+		            System.out.println(d);
+		            String e[]=d.split("");
+		           System.out.println(Arrays.toString(e));
+		           for(int j=0;j<(e.length-1);j++) {
+		   			String f=e[j];
+		   			int count=0;
+		   			for(int k=j+1;k<e.length;k++) {
+		   				
+		   				String g=e[k];
+		   				
+		   				
+		   				if(f.equals(g)) { //equals to
+		   					count=count+1;
+		   				}
+                         }
+		   			System.out.println(f+ " repeted " +count +  " times");
+}
+	}

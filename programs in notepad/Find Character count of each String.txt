@@ -1,0 +1,9 @@
+String s="SATARA IS IN MAHARASHTRA";
+		System.out.println(s);
+		String f[]=s.split(" ");
+		for(int i=0;i<f.length;i++) {
+			String g=f[i];
+			int n=g.length();
+			
+			System.out.println(g+" Value " +n);
+		}

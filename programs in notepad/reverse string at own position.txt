@@ -1,0 +1,23 @@
+	
+		// Reverse each string in array at its own position
+		
+		String a="India is the best";
+		String[]b=a.split(" ");
+		System.out.println(Arrays.toString(b));
+
+		String k="";
+		for(int c=0;c<b.length;c++)
+		{
+		String d=b[c];
+		String e="";
+		for(int f=d.length()-1;f>=0;f--)
+		{
+		e=e+d.charAt(f);
+		}
+		k=k+e+" ";
+		}
+		System.out.println(k);
+		
+			
+		
+		

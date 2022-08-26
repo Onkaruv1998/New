@@ -1,0 +1,10 @@
+public static void main(String[] args){
+int a[]={45,63,96,114,36,89,87};
+int maximum=a[0];
+for(int i=1;i<a.length;i++){
+     if(maximum<a[i]){
+            maximum=a[i];
+           }
+}
+System.out.println("minimumNumber in arrey is " +maximum);
+}

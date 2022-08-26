@@ -1,0 +1,23 @@
+to find amg using while loop
+
+Scanner scn=new Scanner(System.in);
+System.out.println("Enter 3 digit number);
+int num=scn.nextInt();
+int a;
+int b;
+b=num;
+int sum=0;
+while(num>0)
+{
+ a=num%10;
+ num=num/10;
+ sum=sum+(a*a*a);
+ }
+ if(b==sum)
+ {
+ System.Out.println("it is amg number");
+ }
+ else
+ {
+ System.Out.Println("it is not amg number);
+ }
